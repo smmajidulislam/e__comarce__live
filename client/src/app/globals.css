@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+:root {
+  --background: #1b1b3d; /* ডার্ক নেভি ব্লু - মিস্টিরিয়াস ও এলেগ্যান্ট */
+  --foreground: #f7c59f; /* সোফিস্টিকেটেড গোল্ডেন পিচ - চকচকে ও আকর্ষণীয় */
+}
+.input {
+  @apply px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black w-full sm:w-auto;
+}
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Optional: To ensure consistent width & alignment */
+input[type="number"] {
+  /* your other styles here */
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition duration-200 hover:opacity-90;
+}
+/* globals.css বা layout.css ফাইলে */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #30305a;
+    --foreground: #f7c59f;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
