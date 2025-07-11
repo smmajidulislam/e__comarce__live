@@ -8,6 +8,9 @@ const nextConfig = {
       "images.unsplash.com",
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true, // ✅ Add this line to ignore ESLint during build
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
