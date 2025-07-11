@@ -14,7 +14,7 @@ const Page = () => {
   useEffect(() => {
     if (token?.role === true) {
       toast.error(
-        "You are admin. please login from admin panel or visit as a user."
+        "You are admin.please login from admin panel or visit as a user."
       );
       const handleLogout = async () => {
         await logout("home");
