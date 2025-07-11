@@ -1,4 +1,4 @@
-import SignInForm from "../../../../components/auth/SignInForm";
+import SignInForm from "../../../components/auth/SignInForm";
 
 export const metadata = {
   title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
