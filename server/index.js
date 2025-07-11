@@ -29,6 +29,7 @@ app.use(express.json());
 dbConnect();
 
 app.use("/api", router);
+app.get("/api/health", async (req, res) => await res.send("Healthy"));
 
 // Error handling middleware
 app.use((err, req, res, next) => {
