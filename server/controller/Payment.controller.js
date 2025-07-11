@@ -88,11 +88,11 @@ exports.response = async (req, res) => {
     order.paid = true;
     await order.save();
 
-    return res.redirect(`${process.env.FRONTEND_URL}/payment-success`);
+    return res.redirect(`${process.env.FRONTEND_URL}payment-success`);
   } else if (status === "FAILED") {
-    return res.redirect(`${process.env.FRONTEND_URL}/payment-fail`);
+    return res.redirect(`${process.env.FRONTEND_URL}payment-fail`);
   } else {
-    return res.redirect(`${process.env.FRONTEND_URL}/payment-cancel`);
+    return res.redirect(`${process.env.FRONTEND_URL}payment-cancel`);
   }
 };
 // stripe initiate payment
@@ -159,8 +159,8 @@ exports.createCheckoutSession = async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: `${process.env.FRONTEND_URL}/payment-success`,
-      cancel_url: `${process.env.FRONTEND_URL}/payment-cancel`,
+      success_url: `${process.env.FRONTEND_URL}payment-success`,
+      cancel_url: `${process.env.FRONTEND_URL}payment-cancel`,
       metadata: {
         user_id: user || "guest",
         address: ship_add1 || "N/A",

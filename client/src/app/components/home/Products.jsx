@@ -4,7 +4,7 @@ import Skeletons from "../global/Skeletons";
 import { useGetProductsQuery } from "../../features/product/productApi";
 
 const Products = () => {
-  const { data, isLoading } = useGetProductsQuery({ sold: true });
+  const { data, isLoading, error } = useGetProductsQuery({ sold: true });
 
   return (
     <div className="flex flex-wrap justify-center gap-4 px-4 py-8  min-h-screen">
